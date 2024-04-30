@@ -12,16 +12,16 @@ func main() {
 	http.HandleFunc("/", HomeHandler)
 
 	// Fichiers annexes
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./public/static/"))))
-	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("./public/js/"))))
-	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./public/img/"))))
+	http.Handle("/public/static/", http.StripPrefix("/public/static/", http.FileServer(http.Dir("./public/static/"))))
+	http.Handle("/public/js/", http.StripPrefix("/public/js/", http.FileServer(http.Dir("./public/js/"))))
+	http.Handle("/public/img/", http.StripPrefix("/public/img/", http.FileServer(http.Dir("./public/img/"))))
 
 	fmt.Println("Server started on port 8080 : http://localhost:8080")
 	http.ListenAndServe(":8080", nil)
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	ts, err := template.ParseFiles("./index.html")
+	ts, err := template.ParseFiles("./public/templates/index.html")
 	if err != nil {
 		log.Fatal(err)
 	}

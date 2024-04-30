@@ -139,7 +139,6 @@ body {
 
 .svgexperience {
     position: relative;
-    margin-bottom: 100px;
 }
 
 .listexperience {
@@ -147,7 +146,7 @@ body {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 0;
+    top: -30px;
 }
 
 .infoexperience {
@@ -161,6 +160,7 @@ body {
     padding: 10px;
     padding-top: 50px;
     text-align: center;
+    justify-content: center;
 }
 
 .infoexperience a {
