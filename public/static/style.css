@@ -1,0 +1,236 @@
+body {
+    font-size: x-large;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.9);
+    margin: 0px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.bandeau {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.bandeau a {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 5px solid black;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.bandeau a:hover {
+    border-bottom: 5px solid blue;
+}
+
+
+.containerprincipal {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.me,
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.me {
+    width: 25%;
+    margin-right: 60px;
+}
+.me a {
+    text-align: center;
+}
+.me h1 {
+    text-align: center;
+    margin: 0px;
+}
+
+.me div {
+    text-align: center;
+}
+
+.mail {
+    background-color: green;
+    border: 5px solid green;
+    border-radius: 15px;
+    cursor: pointer;
+    word-break: break-all;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.divlink {
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 5px 10px 10px 10px;
+    margin-bottom: 20px;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.link img {
+    height: 100%;
+}
+
+.info {
+    width: 75%;
+}
+
+.presentation {
+    border: 2px solid gray;
+    border-radius: 15px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.presentation h2 {
+    border-bottom: 1px solid gray;
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.stack > div {
+    margin: 0px 10px 15px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    background-color: rgb(128, 128, 128, 0.3);
+    border-radius: 15px;
+}
+
+.stack img {
+    height: 50px;
+}
+
+.experiences,
+.svgexperience,
+.svgexperience svg {
+    width: 100%;
+}
+
+.svgexperience {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.listexperience {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+}
+
+.infoexperience {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-color: rgb(128, 128, 128, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.infoexperience a {
+    text-decoration: none;
+    color: blue;
+}
+
+.infoexperience img {
+    height: 20px;
+}
+
+.titleexperience {
+    font-weight: bold;
+}
+
+.projet {
+    width: 100%;
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+}
+
+.descriptionprojet {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionprojet h4 {
+    margin-bottom: 0px;
+}
+
+.visiteprojet {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visiteprojet a {
+    border-radius: 5px;
+    padding: 0px 15px 5px 15px;
+    background-color: green;
+    text-decoration: none;
+    color: white;
+}
+
+.descriptionprojet p {
+    font-size: medium;
+}
+
+.copyright {
+    font-size: medium;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 850px) {
+    .containerprincipal {
+        flex-direction: column;
+    }
+    .me, .info{
+        width: 90%;
+    }
+    .me {
+        margin-bottom: 25px;
+    }
+}
