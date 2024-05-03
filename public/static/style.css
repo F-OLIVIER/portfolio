@@ -7,7 +7,8 @@ body {
     padding-bottom: 50px;
 }
 
-.bandeau {
+.bandeau,
+.bandeauprojet {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -20,7 +21,8 @@ body {
     z-index: 999;
 }
 
-.bandeau a {
+.bandeau a,
+.bandeauprojet a {
     padding: 10px 0px 10px 0px;
     border-bottom: 5px solid black;
     cursor: pointer;
@@ -28,12 +30,17 @@ body {
     color: white;
 }
 
-.bandeau a:hover {
+.bandeau a:hover,
+.bandeauprojet a:hover {
     border-bottom: 5px solid blue;
 }
 
+/* -------------------------------------------- */
+/* ----------------- home page ---------------- */
+/* -------------------------------------------- */
 
-.containerprincipal {
+.containerprincipal,
+.containerprojet {
     width: 90%;
     display: flex;
     margin: 0 auto;
@@ -52,21 +59,21 @@ body {
     width: 25%;
     margin-right: 60px;
 }
-.me a {
+
+.me a,
+.me img,
+.me div {
     text-align: center;
 }
+
 .me h1 {
     text-align: center;
     margin: 0px;
 }
 
-.me div {
-    text-align: center;
-}
-
 .mail {
-    background-color: green;
-    border: 5px solid green;
+    background-color: rgb(3, 3, 185);
+    border: 5px solid rgb(3, 3, 185);
     border-radius: 15px;
     cursor: pointer;
     word-break: break-all;
@@ -76,18 +83,24 @@ body {
 }
 
 .divlink {
+    display: flex;
+    flex-direction: column;
     border: 2px solid gray;
     border-radius: 15px;
-    padding: 5px 10px 10px 10px;
-    margin-bottom: 20px;
+    padding: 5px 0px 0px 0px;
 }
 
 .link {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 40px;
+    height: 50px;
     margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.cv {
+    margin: 0px 8px 8px 8px;
 }
 
 .link img {
@@ -96,6 +109,8 @@ body {
 
 .info {
     width: 75%;
+    margin-bottom: 200px;
+    margin-top: 75px;
 }
 
 .presentation {
@@ -116,7 +131,8 @@ body {
     justify-content: start;
 }
 
-.stack > div {
+.stack>div,
+.stack a {
     margin: 0px 10px 15px 10px;
     display: flex;
     flex-direction: row;
@@ -165,7 +181,8 @@ body {
 
 .infoexperience a {
     text-decoration: none;
-    color: blue;
+    color: white;
+    text-decoration: underline;
 }
 
 .infoexperience img {
@@ -174,6 +191,11 @@ body {
 
 .titleexperience {
     font-weight: bold;
+}
+
+.projets h2,
+.experiences h2 {
+    margin-top: 80px;
 }
 
 .projet {
@@ -202,10 +224,11 @@ body {
 
 .visiteprojet a {
     border-radius: 5px;
-    padding: 0px 15px 5px 15px;
-    background-color: green;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(3, 3, 185);
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .descriptionprojet p {
@@ -227,10 +250,88 @@ body {
     .containerprincipal {
         flex-direction: column;
     }
-    .me, .info{
+
+    .me,
+    .info {
         width: 90%;
     }
+
     .me {
         margin-bottom: 25px;
     }
+
+    .info {
+        margin-top: 5px;
+    }
+}
+
+/* -------------------------------------------- */
+/* ------------------ projet ------------------ */
+/* -------------------------------------------- */
+.bandeauprojet {
+    justify-content: start;
+    padding-left: 30px;
+}
+
+.infoprojet {
+    width: 90%;
+    margin-bottom: 200px;
+    margin-top: 10px;
+}
+
+.stack a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.center-image {
+    position: relative;
+}
+
+.center-image img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.center-image img.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    cursor: zoom-out;
+    z-index: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 64px;
+    cursor: pointer;
+    color: blue;
+    z-index: 2;
+
+}
+
+#prevBtn {
+    left: 15%;
+}
+
+#nextBtn {
+    right: 15%;
 }

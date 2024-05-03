@@ -13,16 +13,16 @@
 <body>
     <div id="presentation"></div>
     <!-- Menu ancre -->
-    <div class="bandeau">
+    <div id="bandeau" class="bandeau">
         <a href="#presentation">📰 Présentation</a>
         <a href="#experience">📚 Expérience</a>
         <a href="#projets">📝 Projets</a>
     </div>
 
-    <div class="containerprincipal">
+    <div id="containerprincipal" class="containerprincipal">
         <!-- Informtion sur moi -->
         <div class="me">
-            <img src="./public/img/profile-pic.png" />
+            <img src="./public/img/home/profile-pic.png" />
             <h1>OLIVIER Fabien</h1>
             <p>Développeur Full-Stack en recherche d'une alternance</p>
             <a class="mail" href="mailto:fabien.olivier2@gmail.com">fabien.olivier2@gmail.com</a>
@@ -31,16 +31,16 @@
                 <div>Liens utiles</div>
                 <div class="link">
                     <a href="https://github.com/F-OLIVIER" target="_blank">
-                        <img src="./public/img/logo-github.png" />
+                        <img src="./public/img/home/logo-github.png" />
                     </a>
                     <a href="http://www.linkedin.com/in/olivier-fabien" target="_blank">
-                        <img src="./public/img/linkedin.png" />
+                        <img src="./public/img/home/linkedin.png" />
                     </a>
 
                 </div>
+                <a class="mail cv" href="./public/doc/CV_2024_Alternance_OLIVIER_Fabien.pdf" download>Télécharger mon
+                    CV</a>
             </div>
-            <a class="mail" href="./public/doc/CV_2024_Alternance_OLIVIER_Fabien.pdf" download>Télécharger
-                mon CV</a>
 
         </div>
 
@@ -55,27 +55,27 @@
                 <h2>TECHNOLOGIES</h2>
                 <div class="stack">
                     <div>
-                        <img src="./public/img/logo_golang.png" />
+                        <img src="./public/img/home/logo_golang.png" />
                         <div>&nbsp;Golang</div>
                     </div>
                     <div>
-                        <img src="./public/img/logo_js.webp" />
+                        <img src="./public/img/home/logo_js.webp" />
                         <div>&nbsp;Javascript</div>
                     </div>
                     <div>
-                        <img src="./public/img/logo_sqlite.png" />
+                        <img src="./public/img/home/logo_sqlite.png" />
                         <div>&nbsp;SQLite 3</div>
                     </div>
                     <div>
-                        <img src="./public/img/node-js.svg" />
-                        <div>&nbsp;NodeJS</div>
+                        <img src="./public/img/home/node-js.svg" />
+                        <div>&nbsp;Node.js</div>
                     </div>
                     <div>
-                        <img src="./public/img/logo_docker.svg" />
+                        <img src="./public/img/home/logo_docker.svg" />
                         <div>&nbsp;Docker</div>
                     </div>
                     <div>
-                        <img src="./public/img/logo_git.png" />
+                        <img src="./public/img/home/logo_git.png" />
                         <div>&nbsp;Gitea / Github</div>
                     </div>
                 </div>
@@ -100,17 +100,19 @@
 
                     <div class="listexperience">
                         <div class="infoexperience">
-                            <div>De 2009 à 2023</div>
+                            <div>🗓️ De 2009 à 2023</div>
                             <div class="titleexperience">Technicien de laboratoire</div>
                             <div>
-                                <img src="./public/img/lieu.png" /> France
+                                <img src="./public/img/home/lieu.png" /> France
                             </div>
                         </div>
                         <div class="infoexperience">
-                            <div>Depuis 2023</div>
-                            <div>Développeur Full-Stack</div>
-                            <a href="https://zone01rouennormandie.org" target="_blank">Zone01 Rouen</a>
-                            <div><img src="./public/img/lieu.png" /> France, Rouen</div>
+                            <div>🗓️ Depuis 2023</div>
+                            <div class="titleexperience">Formation développeur Full-Stack</div>
+                            <div>
+                                École : <a href="https://zone01rouennormandie.org" target="_blank">Zone01 Rouen</a>
+                            </div>
+                            <div><img src="./public/img/home/lieu.png" /> France, Rouen</div>
                         </div>
                     </div>
                 </div>
@@ -118,14 +120,14 @@
 
             <!-- Projets -->
             <div id="projets" class="projets">
-                <h2>PROJETS</h2>
+                <h2>PROJETS SÉLECTIONNÉS</h2>
                 <div class="projet">
                     <div class="descriptionprojet">
-                        <h4>Bot discord & site web associé (projet personnel 2024)</h4>
-                        <p>🔵 Golang&emsp;🟢 NodeJS&emsp;🟡 Javascript&emsp;🟣 SQLite</p>
+                        <h4>Bot discord & site web associé (projet personnel - 2024)</h4>
+                        <p>🔵 Golang&emsp;🟢 Node.js&emsp;🟡 Javascript&emsp;🟣 SQLite</p>
                     </div>
                     <div class="visiteprojet">
-                        <a href="">Détail &#x2794;</a>
+                        <a href="/projet1">Détail &#x2794;</a>
                     </div>
                 </div>
                 <div class="projet">
@@ -134,16 +136,16 @@
                         <p>🟡 Javascript&emsp;</p>
                     </div>
                     <div class="visiteprojet">
-                        <a href="">Détail &#x2794;</a>
+                        <a href="/projet2">Détail &#x2794;</a>
                     </div>
                 </div>
                 <div class="projet">
                     <div class="descriptionprojet">
-                        <h4>Social Network (projet en cour)</h4>
-                        <p>🔵 Golang&emsp;🟢 NextJS&emsp;🟣 SQLite</p>
+                        <h4>Social Network (projet en cour - 2024)</h4>
+                        <p>🔵 Golang&emsp;🟠 Next.js&emsp;🟣 SQLite&emsp;⚪️ Docker</p>
                     </div>
                     <div class="visiteprojet">
-                        <a href="">Détail &#x2794;</a>
+                        <a href="/projet3">Détail &#x2794;</a>
                     </div>
                 </div>
             </div>
@@ -154,6 +156,6 @@
 
 </body>
 
-<script type="module" src="./public/js/main.jsx"></script>
+<!-- <script type="module" src="./public/js/portfolio.js"></script> -->
 
 </html>
