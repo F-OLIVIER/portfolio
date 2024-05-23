@@ -2,7 +2,7 @@
 
 ## 📝 Descriptif
 
-Mon portfolio est accessible à l'adresse suivante : <a href="http://f-olivier.tech/" target="blank">http://f-olivier.tech/</a>
+Mon portfolio est accessible à l'adresse suivante : <a href="https://f-olivier.tech" target="blank">https://f-olivier.tech</a>
 
 ## ⚙️ Installation & usage
 

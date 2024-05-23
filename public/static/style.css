@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Delius+Unicase:wght@400;700&family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Poetsen+One&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+
 body {
     font-size: x-large;
     color: white;
@@ -5,6 +8,11 @@ body {
     margin: 0px;
     padding-top: 60px;
     padding-bottom: 50px;
+}
+
+body h2 {
+    /* font-family: "Poetsen One", sans-serif; */
+    font-family: "Delius Unicase", sans-serif;
 }
 
 .bandeau,
@@ -32,7 +40,9 @@ body {
 
 .bandeau a:hover,
 .bandeauprojet a:hover {
-    border-bottom: 5px solid blue;
+    color: rgb(0, 91, 211);
+    ;
+    border-bottom: 5px solid rgb(0, 91, 211);
 }
 
 .copyright {
@@ -62,6 +72,11 @@ body {
     margin-bottom: 20px;
 }
 
+.containerprincipal h2,
+.containerprojet h2 {
+    border-bottom: 1px solid gray;
+}
+
 .me,
 .info {
     display: flex;
@@ -80,13 +95,13 @@ body {
 }
 
 .me h1 {
+    font-family: "Delius Unicase", sans-serif;
     text-align: center;
     margin: 0px;
 }
 
 .mail {
-    background-color: rgb(3, 3, 185);
-    border: 5px solid rgb(3, 3, 185);
+    background-color: rgb(0, 63, 144);
     border-radius: 15px;
     cursor: pointer;
     word-break: break-all;
@@ -95,10 +110,15 @@ body {
     color: white;
 }
 
+.mail:hover {
+    background-color: rgb(0, 91, 211);
+    padding: 5px;
+}
+
 .divlink {
     display: flex;
     flex-direction: column;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     border-radius: 15px;
     padding: 5px 0px 0px 0px;
 }
@@ -113,7 +133,12 @@ body {
 }
 
 .cv {
+    padding: 5px;
     margin: 0px 8px 8px 8px;
+}
+
+.cv:hover {
+    background-color: rgb(0, 91, 211);
 }
 
 .link img {
@@ -127,10 +152,8 @@ body {
 }
 
 .presentation {
-    border: 2px solid gray;
     border-radius: 15px;
     text-align: justify;
-    padding: 20px;
 }
 
 .presentation h2 {
@@ -198,6 +221,10 @@ body {
     text-decoration: underline;
 }
 
+.infoexperience a:hover {
+    color: rgb(0, 91, 211);
+}
+
 .infoexperience img {
     height: 20px;
 }
@@ -206,14 +233,14 @@ body {
     font-weight: bold;
 }
 
-.projets h2,
-.experiences h2 {
+.projets h2 {
     margin-top: 80px;
+    margin-bottom: 0;
 }
 
 .projet {
     width: 100%;
-    border-top: 1px solid gray;
+    border-bottom: 1px dashed gray;
     display: flex;
     flex-direction: row;
 }
@@ -238,14 +265,24 @@ body {
 .visiteprojet a {
     border-radius: 5px;
     padding: 5px 15px 5px 15px;
-    background-color: rgb(3, 3, 185);
+    background-color: rgb(0, 63, 144);
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
+.visiteprojet a:hover {
+    background-color: rgb(0, 91, 211);
+}
+
 .descriptionprojet p {
     font-size: medium;
+}
+
+@media (max-width: 1010px) {
+    .projets h2 {
+        margin-top: 120px;
+    }
 }
 
 @media (max-width: 850px) {
@@ -266,6 +303,21 @@ body {
         margin-top: 5px;
     }
 }
+@media (max-width: 800px) {
+
+    body {
+        font-size: large;
+    }
+
+    .infoexperience {
+        width: 49%;
+        margin: 10px 4px 0px 4px;
+        padding: 5px;
+        padding-top: 60px;
+        text-align: left;
+    }
+}
+
 
 /* -------------------------------------------- */
 /* ------------------ projet ------------------ */
@@ -285,6 +337,11 @@ body {
     text-decoration: none;
     color: white;
     text-decoration: underline;
+}
+
+.infoprojet a:hover,
+.stack a:hover {
+    color: rgb(0, 91, 211);
 }
 
 .stack a {
@@ -331,15 +388,28 @@ button {
     border: none;
     font-size: 64px;
     cursor: pointer;
-    color: blue;
+    color: white;
     z-index: 2;
 
 }
 
 #prevBtn {
-    left: 15%;
+    left: 0%;
 }
 
 #nextBtn {
-    right: 15%;
+    right: 0%;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    color: rgb(0, 91, 211);
+}
+
+@media (max-width: 800px) {
+    .containerprojet {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }

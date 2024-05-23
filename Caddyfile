@@ -1,0 +1,3 @@
+f-olivier.tech {
+	reverse_proxy :8000
+}
