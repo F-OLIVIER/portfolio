@@ -118,18 +118,18 @@ body h2 {
 .divlink {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid gray; */
     border-radius: 15px;
     padding: 5px 0px 0px 0px;
 }
 
 .link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     height: 50px;
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+.space {
+    margin-right: 20%;
 }
 
 .cv {
