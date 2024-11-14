@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Delius+Unicase:wght@400;700&family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Poetsen+One&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
+    width: 100%;
     font-size: x-large;
     color: white;
-    /* background-color: rgb(0, 0, 0, 0.9); */
-    background-image: url("../img/background.jpg");
+    background-image: url("../img/background.webp");
     background-size: 100% 100%;
     margin: 0px;
     padding-top: 60px;
@@ -39,7 +39,7 @@ body h2 {
     opacity: 1;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 5;
 }
 
 .bandeau a,
@@ -67,7 +67,7 @@ body h2 {
     padding: 10px;
     position: fixed;
     bottom: 0;
-    z-index: 999;
+    z-index: 5;
 }
 
 
@@ -428,3 +428,54 @@ button {
         margin-bottom: 0px;
     }
 }
+
+/* Modal d'affichage du CV */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    color: black;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    font-size: 32px;
+    cursor: pointer;
+    border-radius: 50%; /* Cercle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover pour le bouton de fermeture */
+.close-btn:hover {
+    background-color: black;
+    color: white;
+}
+
