@@ -9,14 +9,24 @@ import (
 )
 
 func main() {
-	// Start the HTTP server
+	// Route pour robots.txt
+	http.HandleFunc("/robots.txt", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain")
+		fmt.Fprintln(w, "User-agent: *")
+		fmt.Fprintln(w, "Disallow: /public/")
+	})
+
+	// Routes principales
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/projet1", handler)
 	http.HandleFunc("/projet2", handler)
 	http.HandleFunc("/projet3", handler)
 	http.HandleFunc("/bomberman", handler)
 
+	// Fichiers publics
 	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("./public/"))))
+
+	// Démarrage du serveur
 	fmt.Println("Server started on port 8080 : http://localhost:8080")
 	logfile("\n______________________________________________________\n___________________Server started_____________________\n______________________________________________________\n")
 	http.ListenAndServe(":8080", nil)
@@ -25,6 +35,8 @@ func main() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	var adress = ""
 	switch r.URL.Path {
+	case "/":
+		adress = "./public/templates/index.html"
 	case "/projet1":
 		adress = "./public/templates/projet1.html"
 	case "/projet2":
@@ -34,14 +46,17 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	case "/projet3":
 		adress = "./public/templates/projet3.html"
 	default:
-		adress = "./public/templates/index.html"
+		http.NotFound(w, r)
+		return
 	}
 
-	logfile(adress)
+	logfile(r.URL.Path)
 
-	ts, err := template.ParseFiles(r.URL.Path)
+	ts, err := template.ParseFiles(adress)
 	if err != nil {
-		log.Fatal(err)
+		http.Error(w, "Template not found", http.StatusNotFound)
+		log.Printf("Error loading template: %v\n", err)
+		return
 	}
 	ts.Execute(w, nil)
 }
