@@ -2,21 +2,15 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const centerImage = document.querySelector('.center-image');
 const images = [
-    "public/img/projet1/Schema_architecture.png",
-    "public/img/projet1/Schema_Database.png",
-    "public/img/projet1/bot_slashcommand.png",
-    "public/img/projet1/bot_commanddata.png",
-    "public/img/projet1/bot_message_gvg_on.png",
-    "public/img/projet1/bot_message_gvg_off.png",
-    "public/img/projet1/site_home.png",
-    "public/img/projet1/site_dashboard.png",
-    "public/img/projet1/site_charactercard.png",
-    "public/img/projet1/site_groupgvg.png",
-    "public/img/projet1/site_caserne.png",
-    "public/img/projet1/flutter_01.png",
-    "public/img/projet1/flutter_04.png",
-    "public/img/projet1/flutter_02.png",
-    "public/img/projet1/flutter_03.png",
+    "public/img/projet3/home.png",
+    "public/img/projet3/post.png",
+    "public/img/projet3/chat.png",
+    "public/img/projet3/group.png",
+    "public/img/projet3/notif.png",
+    "public/img/projet3/database.png",
+    "public/img/projet3/img_app.png",
+    "public/img/projet3/img_app_offlinemode.png",
+    "public/img/projet3/crossplatform.png"
 ];
 let currentIndex = 0;
 
